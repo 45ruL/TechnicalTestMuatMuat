@@ -39,6 +39,7 @@ export default function FormProduct({ product, onClose }: ProductForm) {
         </h1>
         <form action="" className="flex flex-col">
           <Input
+            type="text"
             label="Name"
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -46,19 +47,27 @@ export default function FormProduct({ product, onClose }: ProductForm) {
           />
 
           <Input
+            type="number"
             label="Price"
             value={formData.price}
             onChange={(e) =>
-              setFormData({ ...formData, price: Number(e.target.value) })
+              setFormData({
+                ...formData,
+                price: Number(e.target.value) < 0 ? 0 : Number(e.target.value),
+              })
             }
             validation={!formData.price}
           />
 
           <Input
+            type="number"
             label="Stock"
             value={formData.stock}
             onChange={(e) =>
-              setFormData({ ...formData, stock: Number(e.target.value) })
+              setFormData({
+                ...formData,
+                stock: Number(e.target.value) < 0 ? 0 : Number(e.target.value),
+              })
             }
             validation={!formData.stock}
           />

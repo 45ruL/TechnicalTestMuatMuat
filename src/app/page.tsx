@@ -64,7 +64,7 @@ export default function Home() {
 
   return (
     <main>
-      <section className=" w-full max-w-7xl mx-auto">
+      <section className="p-4 w-full max-w-7xl mx-auto">
         <h1 className="text-2xl font-bold">My Catalog</h1>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-14">
@@ -166,7 +166,7 @@ export default function Home() {
       </section>
 
       <section>
-        <div className=" relative -z-10 my-24 w-full max-w-7xl mx-auto">
+        <div className=" p-4 relative -z-10 my-24 w-full max-w-7xl mx-auto">
           <h1 className="text-2xl font-bold mb-6 text-center">Pokemon Data</h1>
           <DataTable columns={columns} data={pokemonData || []} pagination />
         </div>

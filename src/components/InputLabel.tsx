@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 interface InputProps {
   label: string;
+  type: string;
   validation: boolean;
   value: string | number;
   onChange: (e: any) => void;
@@ -9,6 +10,7 @@ interface InputProps {
 const Input: React.FC<InputProps> = ({
   label,
   onChange,
+  type,
   validation,
   value,
 }) => {
@@ -18,7 +20,7 @@ const Input: React.FC<InputProps> = ({
         {label}
       </label>
       <input
-        type="text"
+        type={type}
         id="name"
         className={`w-full p-2 border rounded mb-4 ${
           validation && "border-red-600"
