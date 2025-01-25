@@ -166,7 +166,7 @@ export default function Home() {
       </section>
 
       <section>
-        <div className=" p-4 relative -z-10 my-24 w-full max-w-7xl mx-auto">
+        <div className=" p-4  my-24 w-full max-w-7xl mx-auto">
           <h1 className="text-2xl font-bold mb-6 text-center">Pokemon Data</h1>
           <DataTable columns={columns} data={pokemonData || []} pagination />
         </div>
