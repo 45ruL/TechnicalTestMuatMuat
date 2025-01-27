@@ -11,7 +11,7 @@ export const InitialProductData: ProductType[] = [
   {
     id: 2,
     name: "Produk 2",
-    price: 20000,
+    price: 40000,
     stock: 20,
     image: "",
   },
